@@ -10,10 +10,16 @@
             "Entropi\\Qr3dClient\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": { "Entropi\\Qr3dClient\\Tests\\": "tests/" }
+    },
     "authors": [
         {
             "name": "Slavic Dragovtev",
             "email": "slavic@entropi.dev"
         }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
 }
