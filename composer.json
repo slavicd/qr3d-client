@@ -1,0 +1,19 @@
+{
+    "name": "entropi/qr3d-client",
+    "description": "Interacts with a QR3d STL file generator service",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Entropi\\Qr3dClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Slavic Dragovtev",
+            "email": "slavic@entropi.dev"
+        }
+    ]
+}
