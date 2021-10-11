@@ -27,7 +27,7 @@ final class ApiTest extends TestCase
     public function testMake(Client $c)
     {
         $resp = $c->make('http://google.com?q=3d+printing');
-        $this->assertInstanceOf(ResponseInterface::class, $resp);
+        $this->assertInstanceOf(\stdClass::class, $resp);
 
     }
 }

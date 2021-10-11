@@ -21,11 +21,13 @@ class Client
 
     /**
      * @param string $url
-     * @return \Psr\Http\Message\ResponseInterface
+     * @return \stdClass
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function make(string $url)
     {
-        return $this->client->get($this->url, ['query' => ['url' => $url]]);
+        $resp = $this->client->get($this->url, ['query' => ['url' => $url]]);
+        $json = json_decode($resp->getBody());
+        return $json;
     }
 }

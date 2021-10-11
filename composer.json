@@ -3,7 +3,8 @@
     "description": "Interacts with a QR3d STL file generator service",
     "type": "library",
     "require": {
-        "guzzlehttp/guzzle": "^7.0|^6.0"
+        "guzzlehttp/guzzle": "^7.0|^6.0",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {
