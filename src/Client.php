@@ -15,7 +15,7 @@ class Client
 
     public function __construct(string $url)
     {
-        $this->url = $url;
+        $this->url = rtrim($url, "/");
         $this->client = new GuzzleClient();
     }
 
@@ -26,7 +26,7 @@ class Client
      */
     public function make(string $url)
     {
-        $resp = $this->client->get($this->url, ['query' => ['url' => $url]]);
+        $resp = $this->client->get($this->url . '/prepare', ['query' => ['url' => $url]]);
         $json = json_decode($resp->getBody());
         return $json;
     }
